@@ -209,24 +209,99 @@
 // // skip this line if using Create React Native App
 // AppRegistry.registerComponent('AwesomeProject', () => FixedDimensionsBasics);
 //-------------------Height-and-Width-Lesson-Flex-Dimensions--------------------
+//
+// import React, { Component } from 'react';
+// import { AppRegistry, View } from 'react-native';
+//
+// export default class FlexDimensionsBasics extends Component {
+//   render() {
+//     return (
+//       // Try removing the `flex: 1` on the parent View.
+//       //The parent will not have dimenions, so the children can't expand.
+//       //What if you add `height:300` instead of `flex: 1`?
+//       <View style={{flex: 1}}>
+//         <View style={{flex:1, backgroundColor: 'powderblue' }} />
+//         <View style={{flex:2, backgroundColor: 'skyblue' }} />
+//         <View style={{flex:3, backgroundColor: 'steelblue' }} />
+//       </View>
+//     );
+//   }
+// };
+//
+// // skip this line if using Create React Native App
+// AppRegistry.registerComponent('AwesomeProject', () => FlexDimensionsBasics);
+
+//---------------Layout-with-Flexbox-Lesson-Flex-Direction-Example--------------
+//
+// import React, { Component } from 'react';
+// import {  AppRegistry, View  } from 'react-native';
+//
+// export default class FlexDirectionBasics extends Component {
+//   render() {
+//     return (
+//       // Try setting `flexDirection` to `column`.
+//       <View style={{flex:1, flexDirection: 'row'}}>
+//         <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+//         <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+//         <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+//       </View>
+//     );
+//   }
+// }
+
+// skip this line if using Create React Native App
+// AppRegistry.registerComponent('AwesomeProject', () => FlexDirectionBasics);
+
+//---------------Layout-with-Flexbox-Lesson-Justify-Content-Example-------------
+//
+// import React, { Component } from 'react';
+// import { AppRegistry, View } from 'react-native';
+//
+// export default class JustifyContentBasics extends Component {
+//   render() {
+//     return (
+//       // Try setting `justifyContent` to `center`.
+//       // Try setting `flexDirection` to `row`.
+//       <View style={{
+//         flex: 1,
+//         flexDirection: 'column',
+//         justifyContent: 'space-between',
+//       }}>
+//         <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+//         <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+//         <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+//       </View>
+//     );
+//   }
+// };
+//
+// // skip this line if using Create React Native App
+// AppRegistry.registerComponent('AwesomeProject', () => JustifyContentBasics);
+
+//---------------Layout-with-Flexbox-Lesson-Align-Items-Example-----------------
 
 import React, { Component } from 'react';
 import { AppRegistry, View } from 'react-native';
 
-export default class FlexDimensionsBasics extends Component {
+export default class AlignItemsBasics extends Component {
   render() {
     return (
-      // Try removing the `flex: 1` on the parent View.
-      //The parent will not have dimenions, so the children can't expand.
-      //What if you add `height:300` instead of `flex: 1`?
-      <View style={{flex: 1}}>
-        <View style={{flex:1, backgroundColor: 'powderblue' }} />
-        <View style={{flex:2, backgroundColor: 'skyblue' }} />
-        <View style={{flex:3, backgroundColor: 'steelblue' }} />
+      // Try setting `alignItems` to 'flex-start'
+      // Try setting `justifyContent` to `flex-end`.
+      // Try setting `flexDirection` to `row`.
+      <View style={{
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'stretch',
+      }}>
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+        <View style={{height: 50, backgroundColor: 'skyblue'}} />
+        <View style={{height: 100, backgroundColor: 'steelblue'}} />
       </View>
     );
   }
 };
 
 // skip this line if using Create React Native App
-AppRegistry.registerComponent('AwesomeProject', () => FlexDimensionsBasics);
+AppRegistry.registerComponent('AwesomeProject', () => AlignItemsBasics);
