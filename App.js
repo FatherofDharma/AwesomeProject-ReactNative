@@ -154,40 +154,79 @@
 
 //-------------------Styles Example---------------------------------------------
 
+// import React, { Component } from 'react';
+// import { AppRegistry, StyleSheet, Text, View } from 'react-native';
+//
+// const styles = StyleSheet.create({
+//   bigblue: {
+//     color: 'blue',
+//     fontWeight: 'bold',
+//     fontSize: 30,
+//   },
+//   red: {
+//     color: 'red',
+//   },
+//   container: {
+//     flex: 1,
+//       backgroundColor: '#fff',
+//       alignItems: 'center',
+//       justifyContent: 'center',
+//   }
+// });
+//
+// export default class LotsOfStyles extends Component {
+//   render() {
+//     return (
+//       <View style={styles.container}>
+//         <Text style={styles.red}>just red</Text>
+//         <Text style={styles.bigblue}>just bigblue</Text>
+//         <Text style={[styles.bigblue, styles.red]}>bigblue, then red</Text>
+//         <Text style={[styles.red, styles.bigblue]}>red, then bigblue</Text>
+//       </View>
+//     );
+//   }
+// }
+//
+// // skip this line if using Create React Native App
+// AppRegistry.registerComponent('AwesomeProject', () => LotsOfStyles);
+
+//-------------------Height-and-Width-Lesson-Fixed-Dimensions-------------------
+// import React, { Component } from 'react';
+// import { AppRegistry, View } from 'react-native';
+//
+// export default class FixedDimensionsBasics extends Component {
+//   render() {
+//     return (
+//       <View>
+//         <View style={{width: 50, height: 50, backgroundColor: 'powderblue' }} />
+//         <View style={{width: 100, height: 100, backgroundColor: 'skyblue' }} />
+//         <View style={{width: 150, height: 150, backgroundColor: 'steelblue' }} />
+//       </View>
+//     );
+//   }
+// }
+//
+// // skip this line if using Create React Native App
+// AppRegistry.registerComponent('AwesomeProject', () => FixedDimensionsBasics);
+//-------------------Height-and-Width-Lesson-Flex-Dimensions--------------------
+
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, View } from 'react-native';
 
-const styles = StyleSheet.create({
-  bigblue: {
-    color: 'blue',
-    fontWeight: 'bold',
-    fontSize: 30,
-  },
-  red: {
-    color: 'red',
-  },
-  container: {
-    flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-  }
-});
-
-export default class LotsOfStyles extends Component {
+export default class FlexDimensionsBasics extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.red}>just red</Text>
-        <Text style={styles.bigblue}>just bigblue</Text>
-        <Text style={[styles.bigblue, styles.red]}>bigblue, then red</Text>
-        <Text style={[styles.red, styles.bigblue]}>red, then bigblue</Text>
+      // Try removing the `flex: 1` on the parent View.
+      //The parent will not have dimenions, so the children can't expand.
+      //What if you add `height:300` instead of `flex: 1`?
+      <View style={{flex: 1}}>
+        <View style={{flex:1, backgroundColor: 'powderblue' }} />
+        <View style={{flex:2, backgroundColor: 'skyblue' }} />
+        <View style={{flex:3, backgroundColor: 'steelblue' }} />
       </View>
     );
   }
-}
+};
 
 // skip this line if using Create React Native App
-AppRegistry.registerComponent('AwesomeProject', () => LotsOfStyles);
-
-//-------------------Height-and-Width-Lesson------------------------------------
+AppRegistry.registerComponent('AwesomeProject', () => FlexDimensionsBasics);
