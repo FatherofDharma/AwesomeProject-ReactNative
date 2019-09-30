@@ -72,7 +72,7 @@
 
 
 //-----------------State Example------------------------------------------------
-
+//
 // import React, { Component } from 'react';
 // import { AppRegistry, Text, View, StyleSheet } from 'react-native';
 //
@@ -136,7 +136,7 @@
 //     );
 //   }
 // }
-
+//
 // const styles = StyleSheet.create({
 //   container: {
 //     flex: 1,
@@ -145,8 +145,8 @@
 //     justifyContent: 'center',
 //   },
 // });
-
-// skip this line if using Create React Native App
+//
+// // skip this line if using Create React Native App
 // AppRegistry.registerComponent('AwesomeProject', () => BlinkApp);
 
 //-------------------Styles Example---------------------------------------------
@@ -336,6 +336,65 @@
 //---------------------------Handling-Touches-Lesson----------------------------
 
 
+//----------------Handling-Touches-Lesson-Button-0.61-Example-------------------
+
+import React, { Component } from 'react';
+import { Button, StyleSheet, View, AppRegistry } from 'react-native';
+
+export default class ButtonBasics extends Component {
+  _onPressButton() {
+    alert('You tapped the button!')
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.buttonContainer}>
+          <Button
+            onPress={this._onPressButton}
+            title="Press Me"
+          />
+        </View>
+        <View style={styles.buttonContainer}>
+          <Button
+            onPress={this._onPressButton}
+            title="Press Me"
+            color="#841584"
+          />
+        </View>
+        <View style={styles.alternativeLayoutButtonContainer}>
+          <Button
+            onPress={this._onPressButton}
+            title="This looks great!"
+          />
+          <Button
+            onPress={this._onPressButton}
+            title="OK!"
+            color="#841584"
+          />
+        </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+   flex: 1,
+   justifyContent: 'center',
+  },
+  buttonContainer: {
+    margin: 20
+  },
+  alternativeLayoutButtonContainer: {
+    margin: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  }
+});
+
+// // skip this line if using Create React Native App
+AppRegistry.registerComponent('AwesomeProject', () => ButtonBasics);
 //-----------------Handling-Touches-Lesson-Touchable-Highlight------------------
 // import React, { Component } from 'react';
 // import {
@@ -401,98 +460,98 @@
 //
 //---------------------Button-Example-From-Different-Section--------------------
 
-import React from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Button,
-  View,
-  SafeAreaView,
-  Text,
-  Alert,
-} from 'react-native';
-import Constants from 'expo-constants';
-
-function Separator() {
-  return <View style={styles.separator} />;
-}
-
-export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <View>
-        <Text style={styles.title}>
-          The title and onPress handler are required. It is recommended to set
-          accessibilityLabel to help make your app usable by everyone.
-        </Text>
-        <Button
-          title="Press me"
-          onPress={() => Alert.alert('Simple Button pressed')}
-        />
-      </View>
-      <Separator />
-      <View>
-        <Text style={styles.title}>
-          Adjust the color in a way that looks standard on each platform. On
-          iOS, the color prop controls the color of the text. On Android, the
-          color adjusts the backgroud color of the button.
-        </Text>
-        <Button
-          title="Press me"
-          color="#f194ff"
-          onPress={() => Alert.alert('Button with adjusted color pressed')}
-        />
-      </View>
-      <Separator />
-      <View>
-        <Text style={styles.title}>
-          All interaction for the component are disabled.
-        </Text>
-        <Button
-          title="Press me"
-          disabled
-          onPress={() => Alert.alert('Cannot press this one')}
-        />
-      </View>
-      <Separator />
-      <View>
-        <Text style={styles.title}>
-          This layout strategy lets the title define the width of the button.
-        </Text>
-        <View style={styles.fixToText}>
-          <Button
-            title="Left button"
-            onPress={() => Alert.alert('Left button pressed')}
-          />
-          <Button
-            title="Right button"
-            onPress={() => Alert.alert('Right button pressed')}
-          />
-        </View>
-      </View>
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: Constants.statusBarHeight,
-    marginHorizontal: 16,
-  },
-  title: {
-    textAlign: 'center',
-    marginVertical: 8,
-  },
-  fixToText: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  separator: {
-    marginVertical: 8,
-    borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-});
-
-AppRegistry.registerComponent('AwesomeProject', () => App)
+// import React from 'react';
+// import {
+//   AppRegistry,
+//   StyleSheet,
+//   Button,
+//   View,
+//   SafeAreaView,
+//   Text,
+//   Alert,
+// } from 'react-native';
+// import Constants from 'expo-constants';
+//
+// function Separator() {
+//   return <View style={styles.separator} />;
+// }
+//
+// export default function App() {
+//   return (
+//     <SafeAreaView style={styles.container}>
+//       <View>
+//         <Text style={styles.title}>
+//           The title and onPress handler are required. It is recommended to set
+//           accessibilityLabel to help make your app usable by everyone.
+//         </Text>
+//         <Button
+//           title="Press me"
+//           onPress={() => Alert.alert('Simple Button pressed')}
+//         />
+//       </View>
+//       <Separator />
+//       <View>
+//         <Text style={styles.title}>
+//           Adjust the color in a way that looks standard on each platform. On
+//           iOS, the color prop controls the color of the text. On Android, the
+//           color adjusts the backgroud color of the button.
+//         </Text>
+//         <Button
+//           title="Press me"
+//           color="#f194ff"
+//           onPress={() => Alert.alert('Button with adjusted color pressed')}
+//         />
+//       </View>
+//       <Separator />
+//       <View>
+//         <Text style={styles.title}>
+//           All interaction for the component are disabled.
+//         </Text>
+//         <Button
+//           title="Press me"
+//           disabled
+//           onPress={() => Alert.alert('Cannot press this one')}
+//         />
+//       </View>
+//       <Separator />
+//       <View>
+//         <Text style={styles.title}>
+//           This layout strategy lets the title define the width of the button.
+//         </Text>
+//         <View style={styles.fixToText}>
+//           <Button
+//             title="Left button"
+//             onPress={() => Alert.alert('Left button pressed')}
+//           />
+//           <Button
+//             title="Right button"
+//             onPress={() => Alert.alert('Right button pressed')}
+//           />
+//         </View>
+//       </View>
+//     </SafeAreaView>
+//   );
+// }
+//
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     marginTop: Constants.statusBarHeight,
+//     marginHorizontal: 16,
+//   },
+//   title: {
+//     textAlign: 'center',
+//     marginVertical: 8,
+//   },
+//   fixToText: {
+//     flexDirection: 'row',
+//     justifyContent: 'space-between',
+//   },
+//   separator: {
+//     marginVertical: 8,
+//     borderBottomColor: '#737373',
+//     borderBottomWidth: StyleSheet.hairlineWidth,
+//   },
+// });
+//
+// AppRegistry.registerComponent('AwesomeProject', () => App)
