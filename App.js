@@ -337,64 +337,64 @@
 
 
 //----------------Handling-Touches-Lesson-Button-0.61-Example-------------------
-
-import React, { Component } from 'react';
-import { Button, StyleSheet, View, AppRegistry } from 'react-native';
-
-export default class ButtonBasics extends Component {
-  _onPressButton() {
-    alert('You tapped the button!')
-  }
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.buttonContainer}>
-          <Button
-            onPress={this._onPressButton}
-            title="Press Me"
-          />
-        </View>
-        <View style={styles.buttonContainer}>
-          <Button
-            onPress={this._onPressButton}
-            title="Press Me"
-            color="#841584"
-          />
-        </View>
-        <View style={styles.alternativeLayoutButtonContainer}>
-          <Button
-            onPress={this._onPressButton}
-            title="This looks great!"
-          />
-          <Button
-            onPress={this._onPressButton}
-            title="OK!"
-            color="#841584"
-          />
-        </View>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-   flex: 1,
-   justifyContent: 'center',
-  },
-  buttonContainer: {
-    margin: 20
-  },
-  alternativeLayoutButtonContainer: {
-    margin: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
-});
-
-// // skip this line if using Create React Native App
-AppRegistry.registerComponent('AwesomeProject', () => ButtonBasics);
+//
+// import React, { Component } from 'react';
+// import { Button, StyleSheet, View, AppRegistry } from 'react-native';
+//
+// export default class ButtonBasics extends Component {
+//   _onPressButton() {
+//     alert('You tapped the button!')
+//   }
+//
+//   render() {
+//     return (
+//       <View style={styles.container}>
+//         <View style={styles.buttonContainer}>
+//           <Button
+//             onPress={this._onPressButton}
+//             title="Press Me"
+//           />
+//         </View>
+//         <View style={styles.buttonContainer}>
+//           <Button
+//             onPress={this._onPressButton}
+//             title="Press Me"
+//             color="#841584"
+//           />
+//         </View>
+//         <View style={styles.alternativeLayoutButtonContainer}>
+//           <Button
+//             onPress={this._onPressButton}
+//             title="This looks great!"
+//           />
+//           <Button
+//             onPress={this._onPressButton}
+//             title="OK!"
+//             color="#841584"
+//           />
+//         </View>
+//       </View>
+//     );
+//   }
+// }
+//
+// const styles = StyleSheet.create({
+//   container: {
+//    flex: 1,
+//    justifyContent: 'center',
+//   },
+//   buttonContainer: {
+//     margin: 20
+//   },
+//   alternativeLayoutButtonContainer: {
+//     margin: 20,
+//     flexDirection: 'row',
+//     justifyContent: 'space-between'
+//   }
+// });
+//
+// // // skip this line if using Create React Native App
+// AppRegistry.registerComponent('AwesomeProject', () => ButtonBasics);
 //-----------------Handling-Touches-Lesson-Touchable-Highlight------------------
 // import React, { Component } from 'react';
 // import {
@@ -555,3 +555,51 @@ AppRegistry.registerComponent('AwesomeProject', () => ButtonBasics);
 // });
 //
 // AppRegistry.registerComponent('AwesomeProject', () => App)
+//
+//-----------------------------Using-A-ScrollView-------------------------------
+
+import React, { Component } from 'react';
+import { ScrollView, Image, Text, AppRegistry } from 'react-native';
+
+export default class IScrolledDownAndWhatHappenedNextShockedMe extends Component {
+  render() {
+      return (
+        <ScrollView>
+          <Text style={{fontSize:34}}>This is Fun, I can write stuff within a scroll window!</Text>
+          <Text style={{fontSize:60}}>Scroll me plz</Text>
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Text style={{fontSize:60}}>If you like</Text>
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Text style={{fontSize:60}}>Scrolling down</Text>
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Text style={{fontSize:60}}>What's the best</Text>
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Text style={{fontSize:60}}>Framework around?</Text>
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
+          <Text style={{fontSize:80}}>React Native</Text>
+        </ScrollView>
+    );
+  }
+}
+
+AppRegistry.registerComponent('AwesomeProject', () => IScrolledDownAndWhatHappenedNextShockedMe)
